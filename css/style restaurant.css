@@ -1,0 +1,360 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font: 16px/1.5em serif;
+  background-color: rgb(242, 246, 247);
+}
+li {
+  list-style-type: none;
+}
+.datetime {
+  display: inline-block;
+  padding: 3rem;
+  font: bold 1.4em/1em serif;
+}
+.hours{
+  width:100%;
+  text-align: center;
+}
+.customers {
+  margin: 0 auto;
+  padding: 3em 0;
+  text-align: center;
+}
+img[src*="male"]{
+  width: 10%;
+  border-radius: 50%;
+}
+h6 {
+  font: bold 2em sans-serif;
+  margin: 1em 0;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {
+  font: bold 14px/1em sans-serif;
+  width: 100%;
+  background: url(images/board_light.jpg)  no-repeat;
+  background-size: cover;
+  padding-left:10%;
+  padding-top: 4em;
+}
+nav li, nav i {
+  display:inline-block;
+  padding-right:1%;
+}
+nav ul{
+  text-align: right;
+  width:100%;
+  padding: 1em 1em 0 0;
+  margin:0 1% 0 0;
+}
+h1 {
+  font: bold 5em serif;
+  width: 100%;
+  text-align: left;
+  
+  text-transform: capitalize;
+  margin: 0;
+}
+h2 {
+  font: bold 4em serif;
+  margin-top: 0;
+  margin-bottom: .5em;
+}
+input {
+  font: bold 12px sans-serif;
+  border: 1px solid black;
+  border-right: none;
+  margin: 1.5em 0 1.5em 0;
+  padding: 1.2em;
+  width: 30%;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+}
+button{
+  font: bold 12px sans-serif;
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 1.2em;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+button:hover{
+  cursor: pointer;
+  box-shadow: 2px 2px 2px orange, -2px -2px 2px orange;
+}
+.social {
+  font: bold 16px sans-serif;
+  padding-bottom: 1.2em;
+  width: 100%;
+  text-align: left;
+}
+i {
+  padding: 1em;
+  color: orange;
+}
+li i {
+  color: black;
+  padding-top: .5em;
+}
+
+a{
+  color:inherit;
+  text-decoration: none;
+}
+a:hover{
+  color:orange;
+}
+.aboutus {
+  background: linear-gradient(to right, rgba(255, 255, 255,0)30%,rgba(242, 246, 247,1)50%,rgba(242, 246, 247,1)75%,rgba(255, 255, 255,0)), url(images/bowl\ light.jpg)  no-repeat;
+  background-size: cover;
+  padding: 5em 10% 5em 40%;
+}
+.disc{
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+  color:white;
+  font:bold 12px sans-serif;
+  background-color: orange;
+  padding: 1.2em 0 1.2em 1.2em;
+}
+.mini {
+  color: orange;
+  font: bold 14px/1em sans-serif;
+}
+.dishes {
+  width: 100%;
+  padding: 3em 0;
+}
+.center {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  padding:.5em
+}
+.dishes h2{
+  text-align: center;
+  margin:0 auto;
+}
+.dishes li {
+  display: inline-block;
+  padding: 1em 2em .5em 2em;
+  font: bold 14px/1em sans-serif;
+  border-bottom: 2px solid black;
+}
+.dishes ul{
+  width:fit-content;
+  padding: 0;
+  margin: 0 auto 1em auto;
+  text-align: center;
+}
+.foods{
+  width: 100%;
+  text-align: center;
+}
+.foods img{
+  width:100%;
+  padding:.5em;
+}
+.food-item{
+  position: relative;
+  display: inline-block;
+  width: 22%;
+}
+/* ===========================JS to visible on click============================== */
+.food-info{
+  display: none;
+  position:absolute;
+  width:100%;
+  text-align: center;
+  padding:3em;
+  left:-.5em;
+  top:-1em;
+  z-index: 2;
+}
+/* .food-info span{
+  display: inline-block;
+} */
+.call {
+  margin:0 auto;
+  padding:3em 0;
+  background: linear-gradient(to right, rgba(255, 255, 255,0)10%,rgba(242, 246, 247,1)30%,rgba(242, 246, 247,1)75%,rgba(255, 255, 255,0)), url(images/2\ sides\ light.jpg)  no-repeat;
+  background-size: cover;
+}
+.call h2{
+  text-align: center;
+  margin-bottom:.3em; 
+}
+.call .phone {
+  font-size: 3em;
+  color: orange;
+  padding: .5em;
+}
+.phone~span {
+  font: bold 1em sans-serif;
+  text-align: center;
+  display: block;
+}
+.call>div span:last-child{
+  font: bold 2em serif;
+  text-align: center;
+  color: orange;
+  display:block;
+}
+.call video {
+  width: 70%;
+}
+i[class*="arrow"]{
+  padding: .5em;
+}
+.video{
+  text-align: center;
+  margin: 0 auto;
+}
+.video *{
+  vertical-align: middle;
+}
+.datetime>span {
+  display: block;
+  font: bold .7em sans-serif;
+}
+h6+span {
+  font: bold .8em sans-serif;
+  display: block;
+  color:rgb(153, 153, 153) 
+}
+h6~img[src*="stars"] {
+  width: 15%;
+  padding: 1rem 0;
+}
+.customers div {
+  margin:0 20%;
+  
+  font-style: italic;
+}
+
+/* HAMBURGER MENU */
+.hamburger {
+  display: none;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+  padding: 0;
+}
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+.nav-menu{
+  left:0;
+  top: 0;
+  border-radius: 0;
+  padding: .3rem 0;
+}
+.top-nav{
+  padding: .5rem;
+  min-width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 5;
+}
+/******************************************
+/* ADDITIONAL STYLES/MEDIA QUERIES
+/*******************************************/
+
+@media screen and (max-width: 676px){
+  .datetime{
+    padding: 2rem;
+  }
+}
+@media screen and (max-width: 565px){
+  h1{
+    font-size: 4em;
+  }
+  h2{
+    font-size: 3em;
+  }
+  input{
+    width: 65%;
+  }
+  .food-item{
+    display: inline-block;
+    width: 30%;
+  }
+  .aboutus{
+    background: linear-gradient(to right, rgba(255, 255, 255,0)8%,rgba(242, 246, 247,1)21%,rgba(242, 246, 247,1)75%,rgba(255, 255, 255,0)), url(images/bowl\ light.jpg)  no-repeat;
+    padding: 5em 20%;
+  }
+  nav{
+    padding-top: 1em;
+  }
+  i[class*="arrow"]{
+    padding: 0;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    padding-left: .5rem;
+  }
+  .nav-menu.active {
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    width: 100%;
+    border-radius: 1rem;
+    text-align: center;
+    transition: 0.3s;
+    margin:0;
+    padding:0;
+  }
+  .nav-item {
+    display: block;
+    list-style-type: none;
+    margin: 1rem;
+  }
+  li i{
+    padding:.1em;
+  }
+}
+@media screen and (max-width: 470px){
+
+}
